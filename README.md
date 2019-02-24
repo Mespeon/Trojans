@@ -1,6 +1,6 @@
 # Trojans - CvSU-CCAT
 
-# Members
+### Members
 Jansuy, Lennon Benedict
 Musmos, Simon
 Redondo, Akhelys
@@ -10,14 +10,14 @@ Nolledo, Mark Edriane
 A visual novel pertaining to the different dimensions of wellness, and how certain choices about these dimensions affect you.
 
 # Installation Guide
-Requirements
+### Requirements
 - .NET Framework 4.6 or later
 - A compatible SQL server (XAMPP recommended.
 
-## A work in progress, bugs are to be expected.
+### A work in progress, bugs are to be expected.
 
-# Installation
-## The installer packages are under the repo's releases.
+### Installation
+### The installer packages are under the repo's releases.
 1. Run the included .exe installer to install the program.
 2. Enable Apache and MySQL services in XAMPP. In the /localhost/phpmyadmin dashboard, perform the following steps:
 	2.1. Create a database named visual
