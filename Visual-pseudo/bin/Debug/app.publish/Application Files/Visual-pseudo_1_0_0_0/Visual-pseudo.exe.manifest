@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Visual-pseudo.exe" version="1.0.0.0" publicKeyToken="7157cf99c2a87ff7" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Visual-pseudo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Visual-pseudo.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="457728">
+      <assemblyIdentity name="MySql.Data" version="6.9.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vZOt5pn+YIjqzABheL5YRnsrxRe1pFgyD4tfa0entVA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Visual-pseudo.exe" size="249328">
+      <assemblyIdentity name="Visual-pseudo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Sjezl7Lqy9fDxBXrtszRF4+2XlbLW2mkZ6AeAYVMHbQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Visual-pseudo.exe.config" size="186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OMhRAh4uut4hrVhzGjwgfkCZyMb10W7LhRCv0rQ5cBo=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=SONODA-UMI\Mark Nolledo" issuerKeyHash="899f4d72b0bf471b84fea35f3dbd8e84efcc65cc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Jhm8lk1JlJ6KLj/ihMLLO9YOmuu+dWgTGHPL38GmXQE=</DigestValue></Reference></SignedInfo><SignatureValue>j20JLhDRf2lbY9oA+ov1eOia3+218DSQ9O+/dTGhyvy48hgXq0DOT6zLpcH7JYKFQtISQGB5tAmIGnkJe0acKnZue++1aPlRzpPspyh79nvAsxy8sutNsPLb9tbi3xQa4vu4FLx6KFVRIPABvOLgBin+FV5h2ElwSZ5BYGcmmgc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vLcZP76u3/EijDs3UN1IaTyRmOviwyGc8SL0IpsCILXt1dbQGcdBHNwABXwztdjK98tgAVtCY5yS94yTRTFM5JdnssaxFdvkhPb3vmsHr2T3rslkF7vc1DJnBgWmAqF/ojXP2VSScJZgOsp9zFaAbzlbWdwXOWBsBFwH27IAZQk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="015da6c1dfcb7318136875beeb9a0ed63bcbc284e23f2e8a9e94494d96bc1926" Description="" Url=""><as:assemblyIdentity name="Visual-pseudo.exe" version="1.0.0.0" publicKeyToken="7157cf99c2a87ff7" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SONODA-UMI\Mark Nolledo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>oOkmu7ih7Oj+Dn9UgWwFdxIiX1sPjsTRXaYN8yFurwY=</DigestValue></Reference></SignedInfo><SignatureValue>CgJSZnwE3awKMbLVp+5WCJZ9ntpWy5C+EYdBrWwBEidWdWOWmi62DFvaw6S+CF2h9lwymUnOQJ4i0U9kLoXuItyNBoIc7179rBrSh/JbEOmy+KX1snjUQq+fuvLK3rG/IJIlX27+sQd/gjEjuYkn+OfX6mM2lvZjpiNj2iPFhPg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vLcZP76u3/EijDs3UN1IaTyRmOviwyGc8SL0IpsCILXt1dbQGcdBHNwABXwztdjK98tgAVtCY5yS94yTRTFM5JdnssaxFdvkhPb3vmsHr2T3rslkF7vc1DJnBgWmAqF/ojXP2VSScJZgOsp9zFaAbzlbWdwXOWBsBFwH27IAZQk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB9TCCAV6gAwIBAgIQJu07p1mP+q5K00jRgS2AyzANBgkqhkiG9w0BAQsFADA5MTcwNQYDVQQDHi4AUwBPAE4ATwBEAEEALQBVAE0ASQBcAE0AYQByAGsAIABOAG8AbABsAGUAZABvMB4XDTE5MDIyNDA0MDA1MFoXDTIwMDIyNDEwMDA1MFowOTE3MDUGA1UEAx4uAFMATwBOAE8ARABBAC0AVQBNAEkAXABNAGEAcgBrACAATgBvAGwAbABlAGQAbzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvLcZP76u3/EijDs3UN1IaTyRmOviwyGc8SL0IpsCILXt1dbQGcdBHNwABXwztdjK98tgAVtCY5yS94yTRTFM5JdnssaxFdvkhPb3vmsHr2T3rslkF7vc1DJnBgWmAqF/ojXP2VSScJZgOsp9zFaAbzlbWdwXOWBsBFwH27IAZQkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAWnIFE2Oh+kJ845YlxmWZka3O/azntFEVwCUaxAAExjw+CMWS1MJkK0JYAXvVtjJOzCOI8gxGEOCEk10zhvkCnxzLXtV8SEaoNK4pGge8laNSLRptx+4xbxDHLNqndm/9EtFw3Np2GyfLsSXL5vwQPapG3Qb45ZCSTHBMkgSfEcQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

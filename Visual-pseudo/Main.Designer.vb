@@ -24,13 +24,13 @@ Partial Class Main
     Private Sub InitializeComponent()
         Me.pnlControls = New System.Windows.Forms.Panel()
         Me.btnQuit = New System.Windows.Forms.Button()
-        Me.btnPreferences = New System.Windows.Forms.Button()
-        Me.btnLoad = New System.Windows.Forms.Button()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.pnlLeftScrim = New System.Windows.Forms.Panel()
         Me.pnlLoadData = New System.Windows.Forms.Panel()
         Me.btnLoadClose = New System.Windows.Forms.Button()
         Me.lblLoadHeader = New System.Windows.Forms.Label()
+        Me.btnPreferences = New System.Windows.Forms.Button()
+        Me.btnLoad = New System.Windows.Forms.Button()
         Me.pnlControls.SuspendLayout()
         Me.pnlLeftScrim.SuspendLayout()
         Me.pnlLoadData.SuspendLayout()
@@ -65,38 +65,6 @@ Partial Class Main
         Me.btnQuit.TabStop = False
         Me.btnQuit.Text = "Quit"
         Me.btnQuit.UseVisualStyleBackColor = True
-        '
-        'btnPreferences
-        '
-        Me.btnPreferences.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPreferences.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnPreferences.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnPreferences.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnPreferences.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreferences.ForeColor = System.Drawing.Color.White
-        Me.btnPreferences.Location = New System.Drawing.Point(25, 360)
-        Me.btnPreferences.Name = "btnPreferences"
-        Me.btnPreferences.Size = New System.Drawing.Size(244, 51)
-        Me.btnPreferences.TabIndex = 3
-        Me.btnPreferences.TabStop = False
-        Me.btnPreferences.Text = "Preferences"
-        Me.btnPreferences.UseVisualStyleBackColor = True
-        '
-        'btnLoad
-        '
-        Me.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLoad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnLoad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnLoad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLoad.ForeColor = System.Drawing.Color.White
-        Me.btnLoad.Location = New System.Drawing.Point(25, 303)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(244, 51)
-        Me.btnLoad.TabIndex = 2
-        Me.btnLoad.TabStop = False
-        Me.btnLoad.Text = "Load"
-        Me.btnLoad.UseVisualStyleBackColor = True
         '
         'btnStart
         '
@@ -166,6 +134,40 @@ Partial Class Main
         Me.lblLoadHeader.Text = "load data"
         Me.lblLoadHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnPreferences
+        '
+        Me.btnPreferences.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPreferences.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnPreferences.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnPreferences.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnPreferences.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreferences.ForeColor = System.Drawing.Color.White
+        Me.btnPreferences.Location = New System.Drawing.Point(25, 360)
+        Me.btnPreferences.Name = "btnPreferences"
+        Me.btnPreferences.Size = New System.Drawing.Size(244, 51)
+        Me.btnPreferences.TabIndex = 3
+        Me.btnPreferences.TabStop = False
+        Me.btnPreferences.Text = "Preferences"
+        Me.btnPreferences.UseVisualStyleBackColor = True
+        Me.btnPreferences.Visible = False
+        '
+        'btnLoad
+        '
+        Me.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLoad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnLoad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnLoad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLoad.ForeColor = System.Drawing.Color.White
+        Me.btnLoad.Location = New System.Drawing.Point(25, 303)
+        Me.btnLoad.Name = "btnLoad"
+        Me.btnLoad.Size = New System.Drawing.Size(244, 51)
+        Me.btnLoad.TabIndex = 2
+        Me.btnLoad.TabStop = False
+        Me.btnLoad.Text = "Load"
+        Me.btnLoad.UseVisualStyleBackColor = True
+        Me.btnLoad.Visible = False
+        '
         'Main
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -192,10 +194,10 @@ Partial Class Main
     Friend WithEvents pnlControls As Panel
     Friend WithEvents btnStart As Button
     Friend WithEvents btnQuit As Button
-    Friend WithEvents btnPreferences As Button
-    Friend WithEvents btnLoad As Button
     Friend WithEvents pnlLeftScrim As Panel
     Friend WithEvents pnlLoadData As Panel
     Friend WithEvents lblLoadHeader As Label
     Friend WithEvents btnLoadClose As Button
+    Friend WithEvents btnPreferences As Button
+    Friend WithEvents btnLoad As Button
 End Class

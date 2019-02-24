@@ -53,6 +53,7 @@ Partial Class Splash
         Me.MainLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
         Me.MainLayoutPanel.Size = New System.Drawing.Size(496, 303)
         Me.MainLayoutPanel.TabIndex = 0
+        Me.MainLayoutPanel.Visible = False
         '
         'DetailsLayoutPanel
         '
@@ -104,7 +105,7 @@ Partial Class Splash
         Me.ApplicationTitle.Text = "Application Title"
         Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'SplashScreen1
+        'Splash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -114,7 +115,7 @@ Partial Class Splash
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "SplashScreen1"
+        Me.Name = "Splash"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.MainLayoutPanel.ResumeLayout(False)

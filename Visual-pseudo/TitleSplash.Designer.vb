@@ -37,7 +37,7 @@ Partial Class TitleSplash
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(480, 250)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "story title"
+        Me.Label1.Text = "Flux"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
@@ -49,7 +49,6 @@ Partial Class TitleSplash
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(480, 77)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "story title"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Timer1

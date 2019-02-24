@@ -28,3 +28,25 @@ C:\Users\Christian Refe\Desktop\Visual-Second\Visual-pseudo\obj\Debug\Visual_pse
 C:\Users\Christian Refe\Desktop\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.vbproj.GenerateResource.Cache
 C:\Users\Christian Refe\Desktop\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Introductory.resources
 C:\Users\Christian Refe\Desktop\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Introtext.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.exe.config
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.exe
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.xml
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.pdb
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.exe
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.pdb
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.xml
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\MySql.Data.dll
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.vbprojResolveAssemblyReference.cache
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Introductory.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Introtext.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Main.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Resources.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Splash.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Storyboard.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.TitleSplash.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.vbproj.GenerateResource.Cache
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual_pseudo.Ending.resources
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.exe.manifest
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\bin\Debug\Visual-pseudo.application
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.exe.manifest
+C:\Users\Mark Nolledo\Documents\Visual Studio 2015\Projects\Visual-Simon\Visual-Second\Visual-pseudo\obj\Debug\Visual-pseudo.application

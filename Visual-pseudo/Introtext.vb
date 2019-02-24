@@ -41,16 +41,14 @@
                     wordlighter.Stop()
                     Storyboard.Show()
                 End If
-                wordlighter.Interval = 1000
+                wordlighter.Interval = 500
                 ending1 = 1
             End If
         Else
 
             Me.Opacity -= 0.015
             If Me.Opacity <= 0 Then
-
-
-                wordlighter.Interval = 1000
+                wordlighter.Interval = 500
                 ending1 = 0
             End If
 

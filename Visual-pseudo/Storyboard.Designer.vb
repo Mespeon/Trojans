@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Storyboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Storyboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.pnlStoryChoices = New System.Windows.Forms.Panel()
@@ -28,13 +28,14 @@ Partial Class Storyboard
         Me.btnChoiceA = New System.Windows.Forms.Button()
         Me.prgTimer = New System.Windows.Forms.ProgressBar()
         Me.pnlControls = New System.Windows.Forms.Panel()
-        Me.btnSave = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.pnlStoryScrim = New System.Windows.Forms.Panel()
         Me.pnlStoryboard = New System.Windows.Forms.Panel()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.lblStory = New System.Windows.Forms.Label()
         Me.worddisplayer = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrCharPrint = New System.Windows.Forms.Timer(Me.components)
         Me.pnlStoryChoices.SuspendLayout()
         Me.pnlControls.SuspendLayout()
         Me.pnlStoryScrim.SuspendLayout()
@@ -95,13 +96,11 @@ Partial Class Storyboard
         Me.prgTimer.Size = New System.Drawing.Size(1000, 8)
         Me.prgTimer.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.prgTimer.TabIndex = 1
-        Me.prgTimer.Value = 100
         '
         'pnlControls
         '
         Me.pnlControls.BackColor = System.Drawing.Color.Transparent
         Me.pnlControls.BackgroundImage = Global.Visual_pseudo.My.Resources.Resources.scrim
-        Me.pnlControls.Controls.Add(Me.btnSave)
         Me.pnlControls.Controls.Add(Me.btnReturn)
         Me.pnlControls.Controls.Add(Me.btnMenu)
         Me.pnlControls.Dock = System.Windows.Forms.DockStyle.Top
@@ -109,20 +108,6 @@ Partial Class Storyboard
         Me.pnlControls.Name = "pnlControls"
         Me.pnlControls.Size = New System.Drawing.Size(1000, 50)
         Me.pnlControls.TabIndex = 1
-        '
-        'btnSave
-        '
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(290, 12)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(135, 32)
-        Me.btnSave.TabIndex = 2
-        Me.btnSave.Text = "Save Progress"
-        Me.btnSave.UseVisualStyleBackColor = True
-        Me.btnSave.Visible = False
         '
         'btnReturn
         '
@@ -164,12 +149,27 @@ Partial Class Storyboard
         '
         'pnlStoryboard
         '
+        Me.pnlStoryboard.Controls.Add(Me.btnNext)
         Me.pnlStoryboard.Controls.Add(Me.lblStory)
         Me.pnlStoryboard.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlStoryboard.Location = New System.Drawing.Point(0, 0)
         Me.pnlStoryboard.Name = "pnlStoryboard"
         Me.pnlStoryboard.Size = New System.Drawing.Size(1000, 600)
         Me.pnlStoryboard.TabIndex = 0
+        '
+        'btnNext
+        '
+        Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNext.ForeColor = System.Drawing.Color.White
+        Me.btnNext.Location = New System.Drawing.Point(868, 442)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(120, 32)
+        Me.btnNext.TabIndex = 3
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        Me.btnNext.Visible = False
         '
         'lblStory
         '
@@ -181,6 +181,10 @@ Partial Class Storyboard
         Me.lblStory.TabIndex = 0
         Me.lblStory.Text = "Story goes here."
         Me.lblStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'tmrCharPrint
+        '
+        Me.tmrCharPrint.Interval = 1
         '
         'Storyboard
         '
@@ -213,10 +217,11 @@ Partial Class Storyboard
     Friend WithEvents pnlStoryScrim As Panel
     Friend WithEvents btnMenu As Button
     Friend WithEvents btnReturn As Button
-    Friend WithEvents btnSave As Button
     Friend WithEvents pnlStoryboard As Panel
     Friend WithEvents btnChoiceB As Button
     Friend WithEvents btnChoiceA As Button
     Friend WithEvents lblStory As Label
     Friend WithEvents worddisplayer As Timer
+    Friend WithEvents btnNext As Button
+    Friend WithEvents tmrCharPrint As Timer
 End Class

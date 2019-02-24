@@ -1,6 +1,9 @@
 ﻿Module Arceus
     Public ctr1
+    Public choicebtn As Integer
     Public wordarr(250)
+    Public c
+    Public r1, r2, r3, r4, r5, r6
     'Swap overlays
     Public Sub swapOverlays(button, mode)
         If button = "btnStart" Then
@@ -69,9 +72,468 @@
         ctrlPanelToggle(1)
     End Sub
 
-    'Progress story
-    Public Sub forwardStory()
+    Public Sub pageForward(chapter, page)
+        If chapter = 0 Then
+            navChapter0(page)
+        ElseIf chapter = 1 Then
+            navChapter1(page)
+        ElseIf chapter = 2 Then
+            navChapter2(page)
+        ElseIf chapter = 3 Then
+            navChapter3(page)
+        ElseIf chapter = 4 Then
+            navChapter4(page)
+        ElseIf chapter = 5 Then
+            navChapter5(page)
+        Else
+            navChapter6(page)
+        End If
+    End Sub
 
+    'Navigate Chapter 0
+    Public Sub navChapter0(page)
+        Dim chapter As Integer = 0
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+
+
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 7 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    'Navigate Chapter 1
+    Public Sub navChapter1(page)
+        Dim chapter As Integer = 1
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 13 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    'Navigate Chapter 2
+    Public Sub navChapter2(page)
+        Dim chapter As Integer = 2
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 21 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    'Navigate Chapter 3
+    Public Sub navChapter3(page)
+        Dim chapter As Integer = 3
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.lblStory.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 14 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    'Navigate Chapter 4
+    Public Sub navChapter4(page)
+        Dim chapter As Integer = 4
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 11 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    'Navigate Chapter 5
+    Public Sub navChapter5(page)
+        Dim chapter As Integer = 5
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 13 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+    Public Sub printText(str)
+        Dim retString As String
+        c += 1
+        If c < Len(str) Then
+            retString = str.Substring(0, c + 1)
+            Storyboard.lblStory.Text = retString
+        Else
+            Storyboard.tmrCharPrint.Stop()
+            c = 0
+        End If
+
+    End Sub
+    'Navigate Chapter 6
+    Public Sub navChapter6(page)
+        Dim chapter As Integer = 6
+
+        If sqlConnection.State = ConnectionState.Closed Then
+            sqlConnection.Open()
+        End If
+
+        sqlQuery = "SELECT content, choiceA, choiceB FROM stories WHERE chapterNum=" & chapter & " AND pageNum=" & page
+        Try
+            With sqlCommand
+                .CommandText = sqlQuery
+                .Connection = sqlConnection
+            End With
+
+            sqlDataReader = sqlCommand.ExecuteReader
+            sqlDataReader.Read()
+
+            If sqlDataReader.HasRows Then
+                Storyboard.tmrCharPrint.Start()
+                Storyboard.Text = sqlDataReader.Item("content")
+                If (sqlDataReader.Item("choiceA") = "none") Then
+                    Storyboard.btnChoiceA.Visible = False
+                    Storyboard.btnNext.Visible = True
+                Else
+                    Storyboard.btnChoiceA.Visible = True
+                    Storyboard.btnChoiceA.Text = sqlDataReader.Item("choiceA")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                If (sqlDataReader.Item("choiceB") = "none") Then
+                    Storyboard.btnNext.Visible = True
+                    Storyboard.btnChoiceB.Visible = False
+                Else
+                    Storyboard.btnChoiceB.Visible = True
+                    Storyboard.btnChoiceB.Text = sqlDataReader.Item("choiceB")
+                    Storyboard.btnNext.Visible = False
+                End If
+
+                Storyboard.currentPage += 1
+                If Storyboard.currentPage > 14 Then
+                    Storyboard.currentChapter += 1
+                    Storyboard.currentPage = 1
+                End If
+
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+            Else
+                MessageBox.Show("An error has occurred.")
+                sqlCommand.Dispose()
+                sqlDataReader.Close()
+                sqlConnection.Close()
+
+                Storyboard.Close()
+                Main.Show()
+            End If
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
     'Save progress
